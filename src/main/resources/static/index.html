@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Lukica</title>
+		<style media="all">
+		@import url("bootstrap/css/bootstrap-theme.min.css");
+		@import url("bootstrap/css/bootstrap.min.css");
+		@import url("bootstrap/css/bootstrap-slider.css");
+		@import url("bootstrap/css/bootstrap-toggle.min.css");
+		</style>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/sockjs-0.3.4.min.js"></script>
+		<script src="js/stomp.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="bootstrap/js/bootstrap-slider.js"></script>
+		<script src="bootstrap/js/bootstrap-toggle.min.js"></script>
+		<script src="js/script.js"></script>
+		<style>
+			.slider-horizontal{
+				margin-left: 20px;
+			}
+			@media(max-width:767px){
+				.text-xs-center{
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="exampleInputName2">Motion detection:</label>
+				</div>
+				<div class="col-sm-6 col-xs-6">
+					<span id="motionDetectionValue" class="sensor-value"></span>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="exampleInputName2">Sound level:</label>
+				</div>
+				<div class="col-sm-6 col-xs-6">
+					<span id="soundDetectionValue" class="sensor-value"></span>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="exampleInputName2">Light detection:</label>
+				</div>
+				<div class="col-sm-6 col-xs-6">
+					<span id="lightDetectionValue" class="sensor-value"></span>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="exampleInputName2">Gass detection</label>
+				</div>
+				<div class="col-sm-6 col-xs-6">
+					<span id="gassDetectionValue" class="sensor-value"></span>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="temperatureValue">Temperature</label>
+				</div>
+				<div class="col-sm-6 col-xs-6">
+					<span id="temperatureValue" class="sensor-value"></span>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="exampleInputName2">Humidity:</label>
+				</div>
+				<div class="col-sm-6 col-xs-6">
+					<span id="humidityValue" class="sensor-value"></span>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="exampleInputName2">Thermostat:</label>
+				</div>
+				<div class="col-sm-1 col-xs-6">
+					<input id="thermostatSwitch" type="checkbox" checked data-toggle="toggle">
+				</div>
+				<div class="col-sm-5 col-xs-12 text-xs-center">
+					<input id="thermostatSlider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="35" data-slider-step="1" data-slider-value="1"/>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="exampleInputName2">Alaram:</label>
+				</div>
+				<div class="col-sm-6 col-xs-6">
+					<input id="alarmStateSwitch" type="checkbox" checked data-toggle="toggle">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="exampleInputName2">Light:</label>
+				</div>
+				<div class="col-sm-6 col-xs-6">
+					<input id="lightStateSwitch" type="checkbox" checked data-toggle="toggle">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-sm-6 col-xs-6 text-right">
+					<label for="exampleInputName2">Heating:</label>
+				</div>
+				<div class="col-sm-6 col-xs-6">
+					<input id="heaterStateSwitch" type="checkbox" checked data-toggle="toggle">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
